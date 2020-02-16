@@ -1,0 +1,124 @@
+body {
+    min-width: 320px;
+    font-family: TTLakes;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    width: 320px;
+    min-height: 100vh;
+    max-height: 1920px;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+.page-container {
+    padding: 0 16px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+}
+.header__logo {
+    margin-left: 16px;
+    transition: .3s;
+}
+.header__logo:hover {
+    opacity: .9;
+    transform: translate(1px);
+}
+.header__block-grow {
+    flex-grow: 1;
+    justify-content: flex-end;
+} 
+.header__btn-circle:not(:first-of-type) {
+    margin-left: 16px;
+}
+.btn-circle {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    padding: 0;
+}
+.btn-circle__wrap {
+    display: flex;
+    justify-content: center;
+    background: #FF3E79;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transition: .5s;
+}
+.btn-circle__wrap:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+.slide-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 20px 0px;
+    margin: 0;
+}
+.slide-menu__btn {
+    display: block;
+    white-space: nowrap;
+    padding: 16px 24px;
+    border: none;
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: start;
+    transition: .2s;
+    cursor: pointer;
+}
+.slide-menu__item {
+    background: left url(../img/sideline.svg) no-repeat;
+
+}
+.slide-menu__btn--active, .slide-menu__btn:hover {
+    color: #7E7E82;
+}
+.slide-menu__btn:hover {
+    transform: translate(5px);
+}
+.slide-menu__side {
+    width: 20px;
+    height: 45px;
+    position: absolute;
+}
+.contacts__btns {
+    display: flex;
+}
+.contacts__phone, .contacts__mail {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    margin-top: 16px;
+    color: #1B1C21;
+}
+.footer__langs {
+    margin: 40px 0 32px;
+}
+.langs__item {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-right: 7px;
+}
+.langs__item:hover, 
+.contacts__phone:hover, 
+.contacts__mail:hover, 
+.btn-circle__wrap:hover {
+    color: #7E7E82;
+    cursor: pointer;
+}

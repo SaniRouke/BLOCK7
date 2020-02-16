@@ -1,10 +1,13 @@
 import '../scss/style.scss';
 
 console.log('Works!');
-var kek = 5
-function func() {
-    kek = 7
-    console.log(kek)
+
+function showPopupMenu() {
+  let popupMenu = document.querySelector('.wrapper-header-nav-popup');
+  popupMenu.classList.toggle('wrapper-header-nav-popup--hidden');
 }
-kek = 3
-func()
+
+let burger = document.querySelector('.burger');
+burger.addEventListener('click', showPopupMenu);
+let cancel = document.querySelector('.cancel');
+cancel.addEventListener('click', showPopupMenu);

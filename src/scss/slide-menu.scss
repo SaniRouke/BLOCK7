@@ -1,0 +1,71 @@
+// $text-light-color
+.slide-menu {
+  display: flex;
+  list-style: none;
+  padding: 20px 0;
+  overflow-x: scroll;
+
+  &__item:not(:last-of-type) {
+    margin-right: 8px;
+  }
+
+  &__btn {
+    font-family: TTLakes;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    color: $text-light-color;
+    padding: 8px 16px;
+    border: 2px solid $main-background;
+    border-radius: 6px;
+    background: $main-background;
+    box-sizing: border-box;
+    transition: .2s;
+  }
+
+  &__first-item {
+    padding-left: 16px;
+  }
+
+  &__last-item {
+    padding-right: 16px;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    border-color: $slide-menu-btn-color;
+    background: #FFFFFF;
+  }
+
+  &__side {
+    width: 20px;
+    height: 45px;
+    position: absolute;
+
+    &--right {
+      background: linear-gradient(to right, transparent, $main-background 80%);
+      right: 0;
+    }
+
+    &--left {
+      background: linear-gradient(to left, transparent, $main-background 80%);
+      left: 0;
+    }
+  }
+
+  @media (min-width: 720px) {
+    &__first-item {
+      padding-left: 24px;
+    }
+
+    &__last-item {
+      padding-right: 24px;
+    }
+  }
+  @media (min-width: 1120px) {
+    &__side {
+      display: none;
+    }
+  }
+}

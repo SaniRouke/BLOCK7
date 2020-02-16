@@ -1,0 +1,48 @@
+// $text-regular-color
+// $side-color
+.title-main {
+  display: flex;
+  padding-top: 24px;
+
+  &__side {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 40px;
+    background: $side-color;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &__h1 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    color: $text-regular-color;
+  }
+
+  &__wrap-btns {
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  &__btn-circle {
+    background: transparent;
+    margin-left: 32px;
+    &:hover .btn-circle__wrap {
+      border-color: #F8F8F8;
+    }
+  }
+  &__wrap-btns {
+    display: none;
+  }
+  @media (min-width: 1120px) {
+    & {
+      padding-top: 42px;
+    }
+    &__wrap-btns {
+      display: flex;
+    }
+  }
+}

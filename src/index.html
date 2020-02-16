@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -10,88 +10,234 @@
 </head>
 
 <body>
-
-  <header class="header page-container">
-    <button class="btn-circle header__btn-circle">
-      <span class="btn-circle__wrap">
-        <img src="./img/burger.svg" alt="burger">
-      </span>
-    </button>
-    <div class="header__divider header__divider--hidden"></div>
-    <a href="./index.html" class="logo header__logo"><img src="./img/logo.svg" alt="Logo CPS"></a>
-    <div class="header__block-grow header__block-grow--hidden">
-      <button class="btn-circle header__btn-circle header__btn-circle--hidden">
-        <span class="btn-circle__wrap">
-          <img src="./img/call.svg" alt="call">
-        </span>
-      </button>
-      <button class="btn-circle header__btn-circle header__btn-circle--hidden">
-        <span class="btn-circle__wrap">
-          <img src="./img/chat.svg" alt="chat">
-        </span>
-      </button>
-      <button class="btn-circle header__btn-circle header__btn-circle--hidden">
-        <span class="btn-circle__wrap">
-          <img src="./img/profile.svg" alt="profile">
-        </span>
-      </button>
+  <div class="page-wrapper">
+    <div class="wrapper-header-nav-popup">
+      <header class="header-popup page-container">
+        <button class="btn-circle header-popup__btn-circle cancel">
+          <span class="btn-circle__wrap">
+            <img src="./img/cancel.svg" alt="cancel">
+          </span>
+        </button>
+        <div class="header-popup__divider header-popup__divider--hidden"></div>
+        <a href="./index.html" class="logo header-popup__logo"><img src="./img/logo.svg" alt="Logo CPS"></a>
+        <div class="header-popup__block-grow"></div>
+        <button class="btn-circle header-popup__btn-circle header-popup__btn-circle--nav">
+          <span class="btn-circle__wrap">
+            <img src="./img/search.svg" alt="search">
+          </span>
+        </button>
+      </header>
+      <nav class="nav-popup">
+        <ul class="nav-menu">
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Ремонт техники</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Услуги и сервисы</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Корпоративным клиентам</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Продавцам техники</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Партнерам</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Производителям</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Наши сервисные центры</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Контакты</a></li>
+        </ul>
+  
+        <div class="contacts nav-popup__contacts">
+          <div class="contacts__btns">
+            <button class="btn-circle nav-popup__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/call.svg" alt="call">
+              </span>
+            </button>
+            <button class="btn-circle nav-popup__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/chat.svg" alt="chat">
+              </span>
+            </button>
+            <button class="btn-circle nav-popup__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/profile.svg" alt="profile">
+              </span>
+            </button>
+          </div>
+          <a href="tel:8 800 890 8900" class="contacts__phone">8 800 890 8900</a>
+          <a href="mailto:mail@cps.com" class="contacts__mail">mail@cps.com</a>
+          <div class="langs contacts__langs">
+            <a class="langs__item" tabindex="0">RU</a>
+            <a class="langs__item" tabindex="0">EN</a>
+            <a class="langs__item" tabindex="0">CH</a>
+          </div>
+        </div>
+  
+      </nav>
     </div>
-    <div class="header__divider"></div>
-    <button class="btn-circle header__btn-circle">
-      <span class="btn-circle__wrap">
-        <img src="./img/repair.svg" alt="repair">
-      </span>
-    </button>
-    <button class="btn-circle header__btn-circle">
-      <span class="btn-circle__wrap">
-        <img src="./img/checkstatus.svg" alt="checkstatus">
-      </span>
-    </button>
-  </header>
-  <main class="main page-container">
-    <div class="title main__title">
-      <div class="title__side"></div>
-      <h1 class="title__h1">Услуги и сервисы</h1>
-      <div class="title__wrap-btns title__wrap-btns--hidden">
-        <button class="btn-circle title__btn-circle">
-          <span class="btn-circle__label">Оставить заявку</span>
+    <div class="wrapper-header-nav-page">
+      <header class="header-page page-container">
+        <button class="btn-circle header-page__btn-circle burger">
+          <span class="btn-circle__wrap">
+            <img src="./img/burger.svg" alt="burger">
+          </span>
+        </button>
+        <div class="header-page__divider header-page__divider--hidden"></div>
+        <a href="./index.html" class="logo header-page__logo"><img src="./img/logo.svg" alt="Logo CPS"></a>
+        <div class="header-page__block-grow header-page__block-grow--hidden header-page__block-grow--nav">
+          <button class="btn-circle header-page__btn-circle header-page__btn-circle--hidden">
+            <span class="btn-circle__wrap">
+              <img src="./img/call.svg" alt="call">
+            </span>
+          </button>
+          <button class="btn-circle header-page__btn-circle header-page__btn-circle--hidden">
+            <span class="btn-circle__wrap">
+              <img src="./img/chat.svg" alt="chat">
+            </span>
+          </button>
+          <button class="btn-circle header-page__btn-circle header-page__btn-circle--hidden">
+            <span class="btn-circle__wrap">
+              <img src="./img/profile.svg" alt="profile">
+            </span>
+          </button>
+        </div>
+        <div class="header-page__divider"></div>
+        <button class="btn-circle header-page__btn-circle">
           <span class="btn-circle__wrap">
             <img src="./img/repair.svg" alt="repair">
           </span>
         </button>
-        <button class="btn-circle title__btn-circle">
-          <span class="btn-circle__label">Статус ремонта</span>
+        <button class="btn-circle header-page__btn-circle">
           <span class="btn-circle__wrap">
             <img src="./img/checkstatus.svg" alt="checkstatus">
           </span>
         </button>
-      </div>
-    </div>
-    <ul class="slide-menu main__slide-menu">
-      <div class="slide-menu__side slide-menu__side--left"></div>
-      <div class="slide-menu__side slide-menu__side--right"></div>
-      <li class="slide-menu__item slide-menu__first-item"><button
-          class="slide-menu__btn slide-menu__btn--active">Ремонтируемые бренды</button></li>
-      <li class="slide-menu__item"><button class="slide-menu__btn">Ремонтируемые устройства</button></li>
-      <li class="slide-menu__item"><button class="slide-menu__btn">Цены на услуги</button></li>
-      <li class="slide-menu__item"><button class="slide-menu__btn">Адреса сервисных центров</button></li>
-      <li class="slide-menu__item"><button class="slide-menu__btn">Специальные цены</button></li>
-      <li class="slide-menu__item slide-menu__last-item"><button class="slide-menu__btn">Отзывы</button></li>
-    </ul>
-    <div class="content flex-container--disabled">
-      <div class="">
-        <p class="text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-          отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-        <p class="text text--hidden">
-          Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="span--hidden">, что
-            подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям
-            и, в свою очередь, советуют нас родным и близким.</span></p>
-        <button class="expand">Читать дальше</button>
-      </div>
-      <img class="main__img" src="./img/CPS.jpg" alt="CPS image-logo">
-    </div>
-  </main>
+        <button class="btn-circle header-page__btn-circle header-page__btn-circle--nav">
+          <span class="btn-circle__wrap">
+            <img src="./img/search.svg" alt="search">
+          </span>
+        </button>
+      </header>
+      <nav class="nav-page">
+        <ul class="nav-menu">
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Ремонт техники</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Услуги и сервисы</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Корпоративным клиентам</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Продавцам техники</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Партнерам</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Производителям</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Наши сервисные центры</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" tabindex="0">Контакты</a></li>
+        </ul>
 
+        <div class="contacts nav-page__contacts">
+          <div class="contacts__btns">
+            <button class="btn-circle nav-page__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/call.svg" alt="call">
+              </span>
+            </button>
+            <button class="btn-circle nav-page__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/chat.svg" alt="chat">
+              </span>
+            </button>
+            <button class="btn-circle nav-page__btn-circle">
+              <span class="btn-circle__wrap">
+                <img src="./img/profile.svg" alt="profile">
+              </span>
+            </button>
+          </div>
+          <a href="tel:8 800 890 8900" class="contacts__phone">8 800 890 8900</a>
+          <a href="mailto:mail@cps.com" class="contacts__mail">mail@cps.com</a>
+          <div class="langs contacts__langs">
+            <a class="langs__item" tabindex="0">RU</a>
+            <a class="langs__item" tabindex="0">EN</a>
+            <a class="langs__item" tabindex="0">CH</a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+    
+    <main class="main page-container">
+      <section class="page-description">
+        <div class="title-main page-description__title-main">
+          <div class="title-main__side"></div>
+          <h1 class="title-main__h1">Услуги и сервисы</h1>
+          <div class="title-main__wrap-btns title-main__wrap-btns--hidden">
+            <button class="btn-circle title-main__btn-circle">
+              <span class="btn-circle__label">Оставить заявку</span>
+              <span class="btn-circle__wrap">
+                <img src="./img/repair.svg" alt="repair">
+              </span>
+            </button>
+            <button class="btn-circle title-main__btn-circle">
+              <span class="btn-circle__label">Статус ремонта</span>
+              <span class="btn-circle__wrap">
+                <img src="./img/checkstatus.svg" alt="checkstatus">
+              </span>
+            </button>
+          </div>
+        </div>
+        <ul class="slide-menu main__slide-menu">
+          <span class="slide-menu__side slide-menu__side--left"></span>
+          <span class="slide-menu__side slide-menu__side--right"></span>
+          <li class="slide-menu__item slide-menu__first-item"><button class="slide-menu__btn">Ремонтируемые
+              бренды</button></li>
+          <li class="slide-menu__item"><button class="slide-menu__btn">Ремонтируемые устройства</button></li>
+          <li class="slide-menu__item"><button class="slide-menu__btn">Цены на услуги</button></li>
+          <li class="slide-menu__item"><button class="slide-menu__btn">Адреса сервисных центров</button></li>
+          <li class="slide-menu__item"><button class="slide-menu__btn">Специальные цены</button></li>
+          <li class="slide-menu__item slide-menu__last-item"><button class="slide-menu__btn">Отзывы</button></li>
+        </ul>
+        <div class="content flex-container--disabled">
+          <div class="">
+            <p class="text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+              отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p class="text text--hidden">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="span--hidden">, что
+                подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+                рекомендациям
+                и, в свою очередь, советуют нас родным и близким.</span></p>
+            <button class="expand">Читать дальше</button>
+          </div>
+          <img class="main__img" src="./img/CPS.jpg" alt="CPS image-logo">
+        </div>
+      </section>
+
+
+      <!-- <div class="block-6">
+    <div class="swiper-title page-container">Ремонт техники различных брендов</div>
+    <div class="swiper-container">
+      <div class="swiper-menu__side swiper-menu__side--left"></div>
+      <div class="swiper-menu__side swiper-menu__side--right"></div>
+      <div class="page-container swiper-wrapper">
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/lenovo-ico.png"
+              alt="Lenovo"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/samsung-ico.png"
+              alt="Samsung"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/apple-ico.png"
+              alt="Apple"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/viewsonic-ico.png"
+              alt="ViewSonic"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/bosch-ico.png"
+              alt="BOSCH"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/hp-ico.png" alt="HP"><span
+              class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/acer-ico.png"
+              alt="ACER"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/sony-ico.png"
+              alt="Sony"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/lenovo-ico.png"
+              alt="Lenovo"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/samsung-ico.png"
+              alt="Samsung"><span class='btn__arrow'></span></a></div>
+        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/apple-ico.png"
+              alt="Apple"><span class='btn__arrow'></span></a></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="page-container">
+      <button class="expand">Показать все</button>
+    </div>
+  </div> -->
+    </main>
+  </div>
+  <!-- <script src="swiper.min.js"></script> -->
 </body>
 
 </html>

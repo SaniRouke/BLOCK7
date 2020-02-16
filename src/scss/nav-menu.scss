@@ -1,0 +1,115 @@
+.nav-page {
+  display: none;
+  flex-direction: column;
+  min-width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  z-index: 1;
+
+  &__btn-circle:not(:first-of-type) {
+    margin-left: 16px;
+  }
+
+  &__contacts {
+    padding: 0 24px;
+  }
+
+  @media (min-width: 1120px) {
+    display: flex;
+  }
+}
+.nav-popup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  &__btn-circle:not(:first-of-type) {
+    margin-left: 16px;
+  }
+
+  &__contacts {
+    padding: 0 24px;
+  }
+}
+
+.nav-menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+
+  &__item {
+    background: left url(../img/sideline.svg) no-repeat;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: start;
+    color: #1B1C21;
+    white-space: nowrap;
+    cursor: pointer;
+    nav-index: auto;
+    border: $section-border;
+    border-width: 0;
+    border-style: solid;
+    padding: 12px 24px;
+    background: #ffffff;
+    transition: .2s;
+
+    &:hover,
+    &:focus {
+      color: #7E7E82;
+      transform: translate(5px);
+      border-right-width: 10px;
+    }
+  }
+}
+
+.contacts {
+  &__btns {
+    display: flex;
+    margin-top: 32px;
+  }
+
+  &__phone,
+  &__mail {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    margin-top: 16px;
+    color: #1B1C21;
+    cursor: pointer;
+    transition: .2s;
+  }
+
+  &__langs {
+    margin: 40px 0 32px;
+  }
+
+  .langs__item {
+    background: none;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: .2s;
+  }
+
+  &__item:hover,
+  &__phone:hover,
+  &__mail:hover,
+  &__item:focus,
+  &__phone:focus,
+  &__mail:focus,
+  .langs__item:hover,
+  .langs__item:focus {
+    color: #7E7E82;
+  }
+}
