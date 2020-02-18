@@ -3,9 +3,10 @@
     line-height: 24px;
     font-family: TTLakes;
     letter-spacing: -0.2px;
+    text-transform: uppercase;
     color: #7E7E82;
     background: linear-gradient(90deg, #F8F8F8, #FFFFFF);
     padding-top: 16px;
     padding-bottom: 16px;
-    text-transform: uppercase;
+    border-top: $section-border;
 }

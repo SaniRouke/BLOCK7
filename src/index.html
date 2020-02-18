@@ -152,9 +152,9 @@
       </nav>
     </div>
 
-    <main class="main page-container">
+    <main class="main">
       <section class="page-description">
-        <div class="title-main page-description__title-main">
+        <div class="title-main page-description__title-main page-container">
           <div class="title-main__side"></div>
           <h1 class="title-main__h1">Услуги и сервисы</h1>
           <div class="title-main__wrap-btns title-main__wrap-btns--hidden">
@@ -172,7 +172,7 @@
             </button>
           </div>
         </div>
-        <ul class="slide-menu main__slide-menu">
+        <ul class="slide-menu page-description__slide-menu">
           <span class="slide-menu__side slide-menu__side--left"></span>
           <span class="slide-menu__side slide-menu__side--right"></span>
           <li class="slide-menu__item slide-menu__first-item"><button class="slide-menu__btn">Ремонтируемые
@@ -183,60 +183,64 @@
           <li class="slide-menu__item"><button class="slide-menu__btn">Специальные цены</button></li>
           <li class="slide-menu__item slide-menu__last-item"><button class="slide-menu__btn">Отзывы</button></li>
         </ul>
-        <div class="content flex-container--disabled">
-          <div class="">
-            <p class="text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+        <!-- <div class="content page-description__content page-container">
+          <div class="content__half-part">
+            <p class="content__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас
+              вы можете
               отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-            <p class="text text--hidden">
+            <p class="content__text text--hidden">
               Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="span--hidden">, что
                 подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
                 рекомендациям
                 и, в свою очередь, советуют нас родным и близким.</span></p>
-            <button class="expand">Читать дальше</button>
+            <button class="content__expand-btn">Читать дальше</button>
           </div>
-          <img class="main__img" src="./img/CPS.jpg" alt="CPS image-logo">
-        </div>
+          <div class="content__half-part">
+            <img class="content__img" src="./img/CPS.jpg" alt="CPS image-logo">
+          </div>
+        </div> -->
       </section>
 
 
-      <!-- <div class="block-6">
-    <div class="swiper-title page-container">Ремонт техники различных брендов</div>
-    <div class="swiper-container">
-      <div class="swiper-menu__side swiper-menu__side--left"></div>
-      <div class="swiper-menu__side swiper-menu__side--right"></div>
-      <div class="page-container swiper-wrapper">
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/lenovo-ico.png"
-              alt="Lenovo"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/samsung-ico.png"
-              alt="Samsung"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/apple-ico.png"
-              alt="Apple"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/viewsonic-ico.png"
-              alt="ViewSonic"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/bosch-ico.png"
-              alt="BOSCH"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/hp-ico.png" alt="HP"><span
-              class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/acer-ico.png"
-              alt="ACER"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/sony-ico.png"
-              alt="Sony"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/lenovo-ico.png"
-              alt="Lenovo"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/samsung-ico.png"
-              alt="Samsung"><span class='btn__arrow'></span></a></div>
-        <div class="swiper-slide"><a class='btn' href="#"><img class='btn__ico' src="./img/apple-ico.png"
-              alt="Apple"><span class='btn__arrow'></span></a></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <div class="page-container">
-      <button class="expand">Показать все</button>
-    </div>
-  </div> -->
+      <section class="brands">
+        <div class="content-title brands__content-title page-container">Ремонт техники различных брендов</div>
+
+        <div class="brands__swiper-container swiper-container">
+          <div class="brands__side brands__side--left"></div>
+          <div class="brands__side brands__side--right"></div>
+          <div class="brands__swiper-wrapper swiper-wrapper">
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/lenovo-ico.png" alt="Lenovo"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/samsung-ico.png" alt="Samsung"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/apple-ico.png" alt="Apple"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/viewsonic-ico.png" alt="ViewSonic"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/bosch-ico.png" alt="BOSCH"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/hp-ico.png" alt="HP"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/acer-ico.png" alt="ACER"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/sony-ico.png" alt="Sony"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/lenovo-ico.png" alt="Lenovo"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/samsung-ico.png" alt="Samsung"><span class='brands__arrow'></span></a></div>
+            <div class="brands__item swiper-slide"><a class='brands__link' href="#"><img class='brands__icon'
+                  src="./img/apple-ico.png" alt="Apple"><span class='brands__arrow'></span></a></div>
+          </div>
+          <div class="swiper-pagination brands__swiper-pagination"></div>
+        </div>
+        <div class="page-container">
+          <button class="expand">Показать все</button>
+        </div>
+      </section>
     </main>
   </div>
-  <!-- <script src="swiper.min.js"></script> -->
+  <!-- <script src="./js/swiper.min.js"></script> -->
 </body>
 
 </html>

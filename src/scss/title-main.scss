@@ -4,6 +4,10 @@
   display: flex;
   padding-top: 24px;
 
+  @media (min-width: 1120px) {
+    padding-top: 42px;
+  }
+
   &__side {
     position: absolute;
     left: 0;
@@ -25,24 +29,23 @@
   &__wrap-btns {
     justify-content: flex-end;
     flex-grow: 1;
+
+    @media (min-width: 1120px) {
+      display: flex;
+    }
   }
 
   &__btn-circle {
     background: transparent;
     margin-left: 32px;
+
     &:hover .btn-circle__wrap {
       border-color: #F8F8F8;
     }
   }
+
   &__wrap-btns {
     display: none;
   }
-  @media (min-width: 1120px) {
-    & {
-      padding-top: 42px;
-    }
-    &__wrap-btns {
-      display: flex;
-    }
-  }
+
 }

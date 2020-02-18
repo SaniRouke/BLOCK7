@@ -26,10 +26,18 @@
 
   &__first-item {
     padding-left: 16px;
+
+    @media (min-width: 720px) {
+      padding-left: 24px;
+    }
   }
 
   &__last-item {
     padding-right: 16px;
+
+    @media (min-width: 720px) {
+      padding-right: 24px;
+    }
   }
 
   &__btn:hover,
@@ -43,6 +51,10 @@
     height: 45px;
     position: absolute;
 
+    @media (min-width: 1120px) {
+      display: none;
+    }
+
     &--right {
       background: linear-gradient(to right, transparent, $main-background 80%);
       right: 0;
@@ -51,21 +63,6 @@
     &--left {
       background: linear-gradient(to left, transparent, $main-background 80%);
       left: 0;
-    }
-  }
-
-  @media (min-width: 720px) {
-    &__first-item {
-      padding-left: 24px;
-    }
-
-    &__last-item {
-      padding-right: 24px;
-    }
-  }
-  @media (min-width: 1120px) {
-    &__side {
-      display: none;
     }
   }
 }
