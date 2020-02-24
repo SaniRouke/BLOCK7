@@ -85,9 +85,9 @@
     height: $item-height;
     font-size: 14px;
     padding: 16px;
-    border: 1px solid transparent;
+    border: 1px solid #EAEAEA;
     border-radius: 6px;
-    background: transparent;
+    background: #FFF;
     transition: .2s;
 
     @media (min-width: 768px) {
@@ -109,7 +109,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       // border-color: rgba(110, 110, 110, 0.5);
       box-shadow: -1px 3px 5px 2px #ccc;
 
