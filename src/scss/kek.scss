@@ -1,0 +1,21 @@
+.grand-parent {
+    &__parent1 {}
+    &__parent2 {}
+    &__parent3 {
+        margin: 20px;
+    }
+}
+.parent1 {
+    // много кода
+    &__child {}
+}
+.parent2 {
+    // много кода
+    &__child {}
+}
+.parent3 {
+    // совсем далекий код
+    &__child {
+        padding: 10px;
+    }
+}

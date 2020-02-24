@@ -1,39 +1,3 @@
-.nav-page {
-  display: none;
-  flex-direction: column;
-  min-width: 100%;
-  flex-grow: 1;
-  box-sizing: border-box;
-  z-index: 1;
-
-  &__btn-circle:not(:first-of-type) {
-    margin-left: 16px;
-  }
-
-  &__contacts {
-    padding: 0 24px;
-  }
-
-  @media (min-width: 1120px) {
-    display: flex;
-  }
-}
-.nav-popup {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex-grow: 1;
-  box-sizing: border-box;
-
-  &__btn-circle:not(:first-of-type) {
-    margin-left: 16px;
-  }
-
-  &__contacts {
-    padding: 0 24px;
-  }
-}
-
 .nav-menu {
   flex-grow: 1;
   display: flex;
@@ -75,11 +39,15 @@
 }
 
 .contacts {
+  padding: 0 24px;
   &__btns {
     display: flex;
     margin-top: 32px;
   }
+  &__btn-circle {
+    margin-right: 16px;
 
+  }
   &__phone,
   &__mail {
     display: block;

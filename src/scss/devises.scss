@@ -1,6 +1,7 @@
-.brands {
-  $item-height: 72px;
+.devises {
+  $item-height: 160px;
   $container-paddingTop-base: 16px;
+  $container-paddingTop-768: 24px;
 
   margin-top: 24px;
 
@@ -38,6 +39,21 @@
     box-sizing: border-box;
     width: max-content;
 
+    &:not(:first-of-type) {
+      @media (max-width: 767px) {
+        margin-left: 16px;
+      }
+    }
+    &:nth-of-type(n+4) {
+      @media (min-width: 768px) and (max-width: 927px) {
+        display: none;
+      }
+    }
+    &:nth-of-type(n+4) {
+      @media (min-width: 1120px) and (max-width: 1292px) {
+        display: none;
+      }
+    }
     &--visible {
       display: block !important;
     }
@@ -45,42 +61,6 @@
       margin-bottom: 16px;
     }
 
-    @media (min-width: 768px) and (max-width: 927px) {
-      &:nth-of-type(n+7) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 928px) {
-      &:nth-of-type(n+9) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 1120px) {
-
-      &:nth-of-type(n+7) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 1293px) {
-      &:nth-of-type(n) {
-        display: block;
-      }
-
-      &:nth-of-type(n+9) {
-        display: none;
-      }
-    }
-
-    @media (min-width: 1120px) {}
-
-    &:not(:first-of-type) {
-      @media (max-width: 767px) {
-        margin-left: 16px;
-      }
-    }
   }
 
   &__side {
@@ -92,7 +72,7 @@
     z-index: 10;
 
     @media (min-width: 768px) {
-      display: none;
+      margin-top: $container-paddingTop-768;
     }
 
     &--left {
@@ -120,8 +100,7 @@
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
-
-    padding: 0 16px;
+    padding: 16px;
     // margin-right: 16px;
     box-sizing: border-box;
     transition: .2s;
@@ -141,10 +120,22 @@
 
   }
 
-  &__icon {}
+  &__title-item {
+    align-self: start;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    margin: 0;
+  }
+
+  &__icon {
+    display: none;
+  }
 
   &__arrow {
-    width: 40px;
+    align-self: flex-end;
+    min-width: 40px;
     height: 40px;
     border: 2px solid #FF3E79;
     border-radius: 50%;

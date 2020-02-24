@@ -1,0 +1,132 @@
+.popup-call {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translate(130%);
+
+  max-width: 440px;
+  min-width: 320px;
+  border-left: $section-border;
+  box-sizing: border-box;
+  background: #FFF;
+  transition: .35s;
+
+  &--visible {
+    transform: translate(0%);
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+  }
+
+  &__btn-circle {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+
+    @media (min-width: 768px) {
+      top: 32px;
+      left: -32px - 40px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    padding-top: 96px;
+
+    @media (min-width: 768px) {
+      padding-top: 32px;
+    }
+
+  }
+
+  &__side {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 40px;
+    background: $side-color;
+    border-radius: 0 5px 5px 0;
+  }
+
+  &__h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    color: $text-regular-color;
+  }
+
+
+  &__form {
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-regular-color;
+
+    height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #FFF;
+
+    &::placeholder {
+      color: #B5B6BC;
+    }
+
+    &--message {
+      height: 118px;
+    }
+
+    &--submit {
+      margin-left: auto;
+
+      width: initial;
+      height: 32px;
+      border: none;
+      border-radius: 50px;
+      padding: 2px 16px;
+      padding-right: 38px;
+      box-sizing: border-box;
+      background: $buttons-color url(../img/arrow-white.svg) 85% no-repeat;
+      box-shadow: inset 0px 0px 5px -1px #FFF;
+      transition: .2s;
+
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #FFFFFF;
+
+      &:hover {
+        opacity: .9;
+        box-shadow: inset -3px 0px 10px -2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  &__info {
+    margin: 0;
+    margin-bottom: 20px;
+
+    a {
+      color: $buttons-color;
+      text-decoration: none;
+    }
+  }
+
+}

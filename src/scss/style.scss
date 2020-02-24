@@ -1,5 +1,5 @@
 $main-background: #F8F8F8; // основной цвет фона
-$main-background: rgb(194, 194, 194); // основной цвет фона
+// $main-background: rgb(194, 194, 194); // основной цвет фона
 $buttons-color: #FF3E79; // цвет кнопок
 $text-regular-color: #1B1C21;
 $text-light-color: #7E7E82;
@@ -7,6 +7,7 @@ $section-border: 1px solid #D9FFF5;
 $side-color: #41F6D7;
 $slide-menu-btn-color: #B8FFEC;
 $red: 2px solid red;
+
 // $border-buttons: 
 // $outlines:
 
@@ -15,17 +16,27 @@ $red: 2px solid red;
 @import 'page-containers.scss';
 @import 'btn-circle.scss';
 @import 'content-title.scss';
-// Header
+// @import 'mySlider.scss';
+// popups
+@import 'popup-menu.scss';
+@import 'popup-feedback.scss';
+@import 'popup-call.scss';
+// // page-menu
 @import 'header.scss';
 @import 'nav-menu.scss';
+@import 'page-menu.scss';
 // Page description
 @import 'page-description.scss';
 // Brands
 @import 'brands.scss';
-
 // Devises
+@import 'devises.scss';
 // Price
+@import 'prices.scss';
 // Footer
+@import 'footer.scss';
+
+
 @font-face {
   font-family: TTLakes;
   src: url(../fonts/TTLakes-Regular.woff),
@@ -34,77 +45,25 @@ $red: 2px solid red;
 }
 
 /* CONTAINERS START */
+html {
+  overflow-x: hidden;
+}
+a,
+a:focus,
+button,
+button:focus {
+  outline-width: 0;
+}
 body {
+  position: relative;
   min-width: 320px;
   font-family: TTLakes;
   background: $main-background;
-  background: #FFF;
 }
 
 .main {
+  flex-grow: 1;
   background: $main-background;
   position: relative;
-
-  &__slide-menu {
-    margin: 4px -16px;
-  }
-
-  @media (min-width: 720px) {
-    &__slide-menu {
-      margin: 8px -24px;
-    }
-  }
-
-  @media (min-width: 1120px) {
-    &__slide-menu {
-      overflow: hidden;
-      margin: 8px 0px;
-      flex-wrap: wrap;
-    }
-  }
 }
 
-.text {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  color: #1B1C21;
-  margin: 0 0 16px;
-}
-
-.expand {
-  margin-bottom: 16px;
-  padding-left: 32px;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: #1B1C21;
-  background: url(../img/expand.svg) no-repeat;
-  border: none;
-}
-
-
-.text--hidden,
-.span--hidden {
-  display: none;
-}
-
-@media (min-width: 330px) {}
-
-@media (min-width: 720px) {}
-
-@media (min-width: 1120px) {
-  .slide-menu__item:not(:last-of-type) {
-    margin-right: 8px;
-  }
-
-  .slide-menu__first-item {
-    margin-bottom: 8px;
-    padding-left: 0px;
-  }
-
-  .slide-menu__last-item {
-    padding-right: 0px;
-  }
-}

@@ -1,21 +1,9 @@
 // $text-regular-color
 // $side-color
-.page-description {
-  &__title-main {}
+// $slide-menu-btn-color
 
-  &__slide-menu {
-    border: $red;
-    
-    @media (min-width: 1120px) {
-      // width: 800px;
-      overflow: hidden;
-      margin: 8px 0px;
-      flex-wrap: wrap;
-    }
-  }
-
-  &__content {}
-}
+// ============================== title-main
+.page-description__title-main {}
 
 .title-main {
   display: flex;
@@ -44,6 +32,7 @@
   }
 
   &__wrap-btns {
+    display: none;
     justify-content: flex-end;
     flex-grow: 1;
 
@@ -60,41 +49,65 @@
       border-color: #F8F8F8;
     }
   }
-
-  &__wrap-btns {
-    display: none;
-  }
-
 }
 
+// ============================== slide-menu
 // $text-light-color
+
+.page-description__slide-menu {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .slide-menu {
   display: flex;
   list-style: none;
-  padding: 20px 0;
+  padding: 10px 0;
   overflow-x: scroll;
+
+  @media (min-width: 1120px) {
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &__item {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
 
   &__item:not(:last-of-type) {
     margin-right: 8px;
   }
 
   &__first-item {
-    padding-left: 16px;
+    padding-left: 16px; // padding потому-что margin правого item выпадает
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
       padding-left: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 0;
     }
   }
 
   &__last-item {
     padding-right: 16px;
 
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
       padding-right: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-right: 0;
     }
   }
 
   &__btn {
+    // height: 44px;
     font-family: TTLakes;
     font-size: 16px;
     line-height: 24px;
@@ -116,8 +129,12 @@
   }
 
   &__side {
+    $btn-height: 44px;
+    $item-margin: 3px + 3px;
+    $side-height: $btn-height + $item-margin;
+
     width: 20px;
-    height: 45px;
+    height: $side-height;
     position: absolute;
 
     @media (min-width: 1120px) {
@@ -136,24 +153,92 @@
   }
 }
 
+// ============================== content
+.page-description__content {}
+
 .content {
   display: flex;
   flex-direction: column;
+  color: $text-regular-color;
 
-  @media (min-width: 720px) {
+  @media (min-width: 768px) {
     flex-direction: row;
   }
 
   &__half-part {
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-    @media (min-width: 720px) {
-      // min-width: 50%;
+    &:last-of-type {
+      margin-left: -16px;
+      margin-right: -16px;
+
+      @media (min-width: 768px) {
+        margin-left: 34px;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  //////// text
+  &__text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin: 4px 0 16px;
+  }
+
+  &__fst-paragraph {}
+
+  &__snd-paragraph {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline;
+    }
+  }
+
+  &__span {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: inline;
+    }
+  }
+
+  &--hidden {
+    display: inline;
+  }
+
+  ////////  ////////
+  &__expand-btn {
+    align-self: flex-start;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background: url(../img/expand-down.svg) no-repeat;
+    border: 1px solid transparent;
+    transition: .3s;
+
+    @media (min-width: 1120px) {
+      // display: none;
+    }
+    &--hidden {
+      background: url(../img/expand-up.svg) no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      border-top-color: $slide-menu-btn-color;
     }
   }
 
   &__img {
-    max-width: 100%;
-    max-height: 200px;
+    width: 100%;
   }
 }
