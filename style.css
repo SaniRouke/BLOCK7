@@ -1236,9 +1236,9 @@ template {
     height: 200px;
     font-size: 14px;
     padding: 16px;
-    border: 1px solid transparent;
+    border: 1px solid #EAEAEA;
     border-radius: 6px;
-    background: transparent;
+    background: #FFF;
     transition: .2s; }
     @media (min-width: 768px) {
       .prices__item {
@@ -1253,10 +1253,10 @@ template {
     @media (max-width: 767px) {
       .prices__item:not(:first-of-type) {
         margin-left: 16px; } }
-    .prices__item:hover {
+    .prices__item:hover, .prices__item:focus {
       box-shadow: -1px 3px 5px 2px #ccc; }
       @media (min-width: 768px) {
-        .prices__item:hover {
+        .prices__item:hover, .prices__item:focus {
           box-shadow: none; } }
     .prices__item h4 {
       font-weight: normal;
