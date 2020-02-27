@@ -3,10 +3,10 @@
   flex-direction: column;
   position: absolute;
   z-index: 1000;
-  right: 0;
+  right: -520px;
   top: 0;
   bottom: 0;
-  transform: translate(130%);
+  // transform: translate(130%);
 
   max-width: 440px;
   min-width: 320px;
@@ -16,7 +16,8 @@
   transition: .35s;
 
   &--visible {
-    transform: translate(0%);
+    // transform: translate(0%);
+    right: 0;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
   }
 

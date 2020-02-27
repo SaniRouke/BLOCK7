@@ -7,7 +7,8 @@
   bottom: 0;
   height: 100%;
   z-index: 1000;
-  transform: translate(-100%);
+  // transform: translate(-100%);
+  left: -320px;
 
   width: 100%;
   min-width: 320px;
@@ -21,7 +22,8 @@
   }
 
   &--visible {
-    transform: translate(0%);
+    // transform: translate(0%);
+    left: 0;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
   }
 
@@ -58,7 +60,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 950px;
+    max-height: 100%;
     flex-grow: 1;
     box-sizing: border-box;
 
@@ -66,5 +68,4 @@
       padding: 0 24px;
     }
   }
-
 }
