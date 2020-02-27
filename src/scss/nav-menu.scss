@@ -6,11 +6,8 @@
   padding: 0px;
   margin: 0;
 
-  &__item {
-    background: left url(../img/sideline.svg) no-repeat;
-  }
-
   &__link {
+    position: relative;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -22,32 +19,57 @@
     white-space: nowrap;
     cursor: pointer;
     nav-index: auto;
-    border: $section-border;
-    border-width: 0;
-    border-style: solid;
+    // border: $section-border;
+    // border-width: 0;
+    // border-style: solid;
     padding: 12px 24px;
     background: #ffffff;
     transition: .2s;
 
+
     &:hover,
     &:focus {
       color: #7E7E82;
-      transform: translate(5px);
-      border-right-width: 10px;
+      // transform: translate(5px);
+      // border-right-width: 10px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background: $side-color;
+      border-radius: 10px;
+      width: 0px;
+      height: 28px;
+      transform: translateY(-50%);
+      transition: .2s;
+    }
+    &:hover:before,
+    &:focus:before {
+      width: 4px;
     }
   }
 }
 
 .contacts {
   padding: 0 24px;
+
   &__btns {
     display: flex;
     margin-top: 32px;
   }
+
   &__btn-circle {
     margin-right: 16px;
 
   }
+
+  &__phone {
+    font-weight: bold;
+  }
+
   &__phone,
   &__mail {
     display: block;

@@ -39,9 +39,18 @@ $red: 2px solid red;
 
 @font-face {
   font-family: TTLakes;
-  src: url(../fonts/TTLakes-Regular.woff),
-    url(../fonts/TTLakes-Medium.woff),
-    url(../fonts/TTLakes-Bold.woff);
+  src: url(../fonts/TTLakes-Regular.woff);
+  font-weight: normal;
+}
+@font-face {
+  font-family: TTLakes;
+  src: url(../fonts/TTLakes-Medium.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: TTLakes;
+  src: url(../fonts/TTLakes-Bold.woff);
+  font-weight: bold;
 }
 
 /* CONTAINERS START */
