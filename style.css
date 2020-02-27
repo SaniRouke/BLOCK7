@@ -323,6 +323,8 @@ template {
   display: flex;
   flex-direction: column;
   transition: .2s; }
+  .page-wrapper--hidden {
+    opacity: .05; }
   @media (min-width: 1120px) {
     .page-wrapper {
       flex-direction: row; } }
@@ -372,7 +374,7 @@ template {
 .popup-menu {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   height: 100%;
