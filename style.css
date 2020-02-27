@@ -422,7 +422,7 @@ template {
 .popup-feedback {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   right: -520px;
   top: 0;
@@ -528,7 +528,7 @@ template {
 .popup-call {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   right: -520px;
   top: 0;
@@ -839,6 +839,8 @@ template {
   .slide-menu__item {
     margin-top: 3px;
     margin-bottom: 3px; }
+  .slide-menu__item:hover {
+    cursor: pointer; }
   .slide-menu__item:not(:last-of-type) {
     margin-right: 8px; }
   .slide-menu__first-item {
@@ -873,7 +875,8 @@ template {
     transition: .2s; }
   .slide-menu__btn:hover, .slide-menu__btn:focus {
     border-color: #B8FFEC;
-    background: #FFFFFF; }
+    background: #FFFFFF;
+    cursor: pointer; }
   .slide-menu__side {
     width: 20px;
     height: 50px;
@@ -938,7 +941,8 @@ template {
     .content__expand-btn--hidden {
       background: url(./static/expand-up.svg) no-repeat; }
     .content__expand-btn:hover, .content__expand-btn:focus {
-      border-top-color: #B8FFEC; }
+      border-top-color: #B8FFEC;
+      cursor: pointer; }
   .content__img {
     width: 100%; }
 
@@ -1063,7 +1067,8 @@ template {
     .brands__expand-btn--hidden {
       background: url(./static/expand-up.svg) no-repeat; }
     .brands__expand-btn:hover, .brands__expand-btn:focus {
-      border-top-color: #B8FFEC; }
+      border-top-color: #B8FFEC;
+      cursor: pointer; }
 
 .devises {
   margin-top: 24px; }
@@ -1188,7 +1193,8 @@ template {
     .devises__expand-btn--hidden {
       background: url(./static/expand-up.svg) no-repeat; }
     .devises__expand-btn:hover, .devises__expand-btn:focus {
-      border-top-color: #B8FFEC; }
+      border-top-color: #B8FFEC;
+      cursor: pointer; }
 
 .prices {
   margin-top: 24px; }
