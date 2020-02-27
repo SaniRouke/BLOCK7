@@ -379,7 +379,7 @@ template {
   bottom: 0;
   height: 100%;
   z-index: 1000;
-  transform: translate(-100%);
+  left: -320px;
   width: 100%;
   min-width: 320px;
   border-right: 1px solid #D9FFF5;
@@ -390,7 +390,7 @@ template {
     .popup-menu {
       width: 320px; } }
   .popup-menu--visible {
-    transform: translate(0%);
+    left: 0;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02); }
   .popup-menu__header {
     display: flex;
@@ -413,7 +413,7 @@ template {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 950px;
+    max-height: 100%;
     flex-grow: 1;
     box-sizing: border-box; }
     .popup-menu__nav__contacts {
@@ -424,10 +424,9 @@ template {
   flex-direction: column;
   position: absolute;
   z-index: 1000;
-  right: 0;
+  right: -520px;
   top: 0;
   bottom: 0;
-  transform: translate(130%);
   max-width: 440px;
   min-width: 320px;
   border-left: 1px solid #D9FFF5;
@@ -435,7 +434,7 @@ template {
   background: #FFF;
   transition: .35s; }
   .popup-feedback--visible {
-    transform: translate(0%);
+    right: 0;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02); }
   .popup-feedback__btn-circle {
     position: absolute;
@@ -531,10 +530,9 @@ template {
   flex-direction: column;
   position: absolute;
   z-index: 1000;
-  right: 0;
+  right: -520px;
   top: 0;
   bottom: 0;
-  transform: translate(130%);
   max-width: 440px;
   min-width: 320px;
   border-left: 1px solid #D9FFF5;
@@ -542,7 +540,7 @@ template {
   background: #FFF;
   transition: .35s; }
   .popup-call--visible {
-    transform: translate(0%);
+    right: 0;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02); }
   .popup-call__btn-circle {
     position: absolute;
