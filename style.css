@@ -323,8 +323,6 @@ template {
   display: flex;
   flex-direction: column;
   transition: .2s; }
-  .page-wrapper--hidden {
-    opacity: .05; }
   @media (min-width: 1120px) {
     .page-wrapper {
       flex-direction: row; } }
@@ -374,7 +372,7 @@ template {
 .popup-menu {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -447,6 +445,7 @@ template {
         left: -72px; } }
   .popup-feedback__title {
     display: flex;
+    align-items: center;
     padding-top: 96px; }
     @media (min-width: 768px) {
       .popup-feedback__title {
@@ -473,6 +472,7 @@ template {
   .popup-feedback__input {
     margin-bottom: 16px;
     font-size: 16px;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
@@ -517,7 +517,9 @@ template {
         box-shadow: inset -3px 0px 10px -2px rgba(0, 0, 0, 0.5); }
   .popup-feedback__info {
     margin: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #7E7E82; }
     .popup-feedback__info a {
       color: #FF3E79;
       text-decoration: none; }
@@ -576,6 +578,7 @@ template {
   .popup-call__input {
     margin-bottom: 16px;
     font-size: 16px;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
@@ -620,7 +623,9 @@ template {
         box-shadow: inset -3px 0px 10px -2px rgba(0, 0, 0, 0.5); }
   .popup-call__info {
     margin: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #7E7E82; }
     .popup-call__info a {
       color: #FF3E79;
       text-decoration: none; }
@@ -698,9 +703,8 @@ template {
   list-style: none;
   padding: 0px;
   margin: 0; }
-  .nav-menu__item {
-    background: left url(./static/sideline.svg) no-repeat; }
   .nav-menu__link {
+    position: relative;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -712,16 +716,24 @@ template {
     white-space: nowrap;
     cursor: pointer;
     nav-index: auto;
-    border: 1px solid #D9FFF5;
-    border-width: 0;
-    border-style: solid;
     padding: 12px 24px;
     background: #ffffff;
     transition: .2s; }
     .nav-menu__link:hover, .nav-menu__link:focus {
-      color: #7E7E82;
-      transform: translate(5px);
-      border-right-width: 10px; }
+      color: #7E7E82; }
+    .nav-menu__link:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background: #41F6D7;
+      border-radius: 10px;
+      width: 0px;
+      height: 28px;
+      transform: translateY(-50%);
+      transition: .2s; }
+    .nav-menu__link:hover:before, .nav-menu__link:focus:before {
+      width: 4px; }
 
 .contacts {
   padding: 0 24px; }
@@ -730,6 +742,8 @@ template {
     margin-top: 32px; }
   .contacts__btn-circle {
     margin-right: 16px; }
+  .contacts__phone {
+    font-weight: bold; }
   .contacts__phone, .contacts__mail {
     display: block;
     width: -webkit-max-content;
@@ -789,7 +803,7 @@ template {
     margin: 0;
     font-size: 28px;
     line-height: 40px;
-    font-weight: 900;
+    font-weight: bold;
     letter-spacing: -0.6px;
     color: #1B1C21; }
   .title-main__wrap-btns {
@@ -820,7 +834,8 @@ template {
       overflow: hidden;
       flex-wrap: wrap;
       padding-left: 32px;
-      padding-right: 32px; } }
+      padding-right: 32px;
+      margin-top: 0; } }
   .slide-menu__item {
     margin-top: 3px;
     margin-bottom: 3px; }
@@ -845,6 +860,7 @@ template {
   .slide-menu__btn {
     font-family: TTLakes;
     font-size: 16px;
+    font-weight: medium;
     line-height: 24px;
     letter-spacing: -0.2px;
     white-space: nowrap;
@@ -913,7 +929,7 @@ template {
     margin-bottom: 16px;
     padding-left: 32px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px;
     background: url(./static/expand-down.svg) no-repeat;
@@ -1236,7 +1252,6 @@ template {
     height: 200px;
     font-size: 14px;
     padding: 16px;
-    border: 1px solid #EAEAEA;
     border-radius: 6px;
     background: #FFF;
     transition: .2s; }
@@ -1370,10 +1385,11 @@ template {
     letter-spacing: -0.2px;
     color: #1B1C21;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
     transition: .2s; }
     .prices__link-offer:hover, .prices__link-offer:focus {
       opacity: .9;
-      border-bottom: 1px solid #1B1C21; }
+      border-color: #1B1C21; }
     .prices__link-offer:hover span,
     .prices__link-offer:focus span {
       transform: translate(2px); }
@@ -1424,7 +1440,18 @@ template {
 
 @font-face {
   font-family: TTLakes;
-  src: url(./fonts/TTLakes-Regular.woff), url(./fonts/TTLakes-Medium.woff), url(./fonts/TTLakes-Bold.woff); }
+  src: url(./fonts/TTLakes-Regular.woff);
+  font-weight: normal; }
+
+@font-face {
+  font-family: TTLakes;
+  src: url(./fonts/TTLakes-Medium.woff);
+  font-weight: 500; }
+
+@font-face {
+  font-family: TTLakes;
+  src: url(./fonts/TTLakes-Bold.woff);
+  font-weight: bold; }
 
 /* CONTAINERS START */
 html {
