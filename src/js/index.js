@@ -41,7 +41,6 @@ let showPopup = function (popup) {
     pageWrapper.classList.add('page-wrapper--hidden');
 
     popupNode.classList.add(`${popup}--visible`);
-    console.log(popupNode.classList)
     document.addEventListener('keydown', function (evt) {
       if (evt.keyCode === 27) {
         doVisible();
