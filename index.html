@@ -13,7 +13,7 @@
   
   <div class="popup-menu">
     <header class="popup-menu__header page-container">
-      <button class="btn-circle popup-menu__btn-circle popup-menu__cancel">
+      <button class="btn-circle btn-circle--margin--none popup-menu__btn-circle popup-menu__cancel">
         <span class="btn-circle__wrap">
           <img src="./img/cancel.svg" alt="cancel">
         </span>
@@ -40,7 +40,7 @@
 
       <div class="contacts popup-menu__contacts">
         <div class="contacts__btns">
-          <button class="btn-circle popup-menu__btn-circle call">
+          <button class="btn-circle popup-menu__btn-circle popup-menu__btn-circle--margin--none call">
             <span class="btn-circle__wrap">
               <img src="./img/call.svg" alt="call">
             </span>
@@ -110,7 +110,7 @@
   <div class="page-wrapper">
     <div class="page-menu">
       <header class="page-menu__header header page-container">
-        <button class="btn-circle header__btn-circle burger">
+        <button class="btn-circle header__btn-circle header__btn-circle--margin--none burger">
           <span class="btn-circle__wrap">
             <img src="./img/burger.svg" alt="burger">
           </span>
@@ -236,7 +236,7 @@
                 и, в свою очередь, советуют нас родным и близким.</span></p>
             <button class="content__expand-btn">Читать дальше</button>
           </div>
-          <div class="content__half-part">
+          <div class="content__half-part content__half-part--img">
             <img class="content__img" src="./img/CPS.jpg" alt="CPS image-logo">
           </div>
         </div>
@@ -249,17 +249,22 @@
           <div class="brands__side brands__side--left"></div>
           <div class="brands__side brands__side--right"></div>
           <div class="brands__swiper-wrapper swiper-wrapper">
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/lenovo-ico.png" alt="Lenovo"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--first swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/lenovo-ico.png" alt="Lenovo"><span class="brands__arrow"></span></a></div>
             <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/samsung-ico.png" alt="Samsung"><span class="brands__arrow"></span></a></div>
             <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/apple-ico.png" alt="Apple"><span class="brands__arrow"></span></a></div>
             <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/viewsonic-ico.png" alt="ViewSonic"><span class="brands__arrow"></span></a></div>
             <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/bosch-ico.png" alt="BOSCH"><span class="brands__arrow"></span></a></div>
             <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/hp-ico.png" alt="HP"><span class="brands__arrow"></span></a></div>
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/acer-ico.png" alt="ACER"><span class="brands__arrow"></span></a></div>
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/sony-ico.png" alt="Sony"><span class="brands__arrow"></span></a></div>
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/lenovo-ico.png" alt="Lenovo"><span class="brands__arrow"></span></a></div>
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/samsung-ico.png" alt="Samsung"><span class="brands__arrow"></span></a></div>
-            <div class="brands__item swiper-slide"><a class="brands__link" href="#"><img class="brands__icon" src="./img/apple-ico.png" alt="Apple"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--visible--sm swiper-slide">
+              <a class="brands__link" href="#"><img class="brands__icon" src="./img/acer-ico.png" alt="ACER"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--visible--sm swiper-slide">
+              <a class="brands__link" href="#"><img class="brands__icon" src="./img/sony-ico.png" alt="Sony"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--visible--lg swiper-slide">
+              <a class="brands__link" href="#"><img class="brands__icon" src="./img/lenovo-ico.png" alt="Lenovo"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--visible--lg swiper-slide">
+              <a class="brands__link" href="#"><img class="brands__icon" src="./img/samsung-ico.png" alt="Samsung"><span class="brands__arrow"></span></a></div>
+            <div class="brands__item brands__item--visible--lg swiper-slide">
+              <a class="brands__link" href="#"><img class="brands__icon" src="./img/apple-ico.png" alt="Apple"><span class="brands__arrow"></span></a></div>
           </div>
           <div class="swiper-pagination brands__swiper-pagination"></div>
         </div>
@@ -273,7 +278,7 @@
           <div class="devises__side devises__side--left"></div>
           <div class="devises__side devises__side--right"></div>
           <div class="devises__swiper-wrapper swiper-wrapper">
-            <div class="devises__item swiper-slide"><a class="devises__link" href="#">
+            <div class="devises__item devises__item--first swiper-slide"><a class="devises__link" href="#">
                 <p class="devises__title-item">Ремонт ноутбуков</p><img class="devises__icon" src="" alt="Ремонт ноутбуков"><span class="devises__arrow"></span>
               </a></div>
             <div class="devises__item swiper-slide"><a class="devises__link" href="#">
@@ -282,7 +287,7 @@
             <div class="devises__item swiper-slide"><a class="devises__link" href="#">
                 <p class="devises__title-item">Ремонт ПК</p><img class="devises__icon" src="" alt="Ремонт ПК"><span class="devises__arrow"></span>
               </a></div>
-            <div class="devises__item swiper-slide"><a class="devises__link" href="#">
+            <div class="devises__item devises__item--visible--sm swiper-slide"><a class="devises__link" href="#">
                 <p class="devises__title-item">Ремонт мониторов</p><img class="devises__icon" src="" alt="Ремонт мониторов"><span class="devises__arrow"></span>
               </a></div>
           </div>
@@ -298,23 +303,23 @@
           <div class="prices__side prices__side--left"></div>
           <div class="prices__side prices__side--right"></div>
           <div class="prices__header">
-            <div class="prices__header-item">Ремонтные услуги</div>
-            <div class="prices__header-item">Цена</div>
-            <div class="prices__header-item">Срок</div>
+            <div class="prices__header-item prices__header-item--pos--1">Ремонтные услуги</div>
+            <div class="prices__header-item prices__header-item--pos--2">Цена</div>
+            <div class="prices__header-item prices__header-item--pos--3">Срок</div>
           </div>
           <div class="prices__swiper-wrapper swiper-wrapper">
-            <div class="prices__item swiper-slide">
+            <div class="prices__item prices__item--first swiper-slide">
               <div class="prices__title-item">
-                <h4>Ремонтные услуги</h4>
-                <p>Диагностика</p>
+                <h4 class="prices__h4">Ремонтные услуги</h4>
+                <p class="prices__p">Диагностика</p>
               </div>
               <div class="prices__price-item">
-                <h4>Цена</h4>
-                <p>Бесплатно</p>
+                <h4 class="prices__h4">Цена</h4>
+                <p class="prices__p">Бесплатно</p>
               </div>
               <div class="prices__time-order-item">
                 <div>
-                  <h4>Срок</h4>
+                  <h4 class="prices__h4">Срок</h4>
                   <p>30 мин</p>
                 </div>
                 <a class="prices__link" href="#">Заказать<span class="prices__arrow"></span></a>
@@ -322,16 +327,16 @@
             </div>
             <div class="prices__item swiper-slide">
               <div class="prices__title-item">
-                <h4>Ремонтные услуги</h4>
-                <p>Замена дисплея</p>
+                <h4 class="prices__h4">Ремонтные услуги</h4>
+                <p class="prices__p">Замена дисплея</p>
               </div>
               <div class="prices__price-item">
-                <h4>Цена</h4>
-                <p>1 000 ₽</p>
+                <h4 class="prices__h4">Цена</h4>
+                <p class="prices__p">1 000 ₽</p>
               </div>
               <div class="prices__time-order-item">
                 <div>
-                  <h4>Срок</h4>
+                  <h4 class="prices__h4">Срок</h4>
                   <p>30-120 мин</p>
                 </div>
                 <a class="prices__link" href="#">Заказать<span class="prices__arrow"></span></a>
@@ -339,16 +344,16 @@
             </div>
             <div class="prices__item swiper-slide">
               <div class="prices__title-item">
-                <h4>Ремонтные услуги</h4>
-                <p>Замена полифонического динамика</p>
+                <h4 class="prices__h4">Ремонтные услуги</h4>
+                <p class="prices__p">Замена полифонического динамика</p>
               </div>
               <div class="prices__price-item">
-                <h4>Цена</h4>
-                <p>1 000 ₽</p>
+                <h4 class="prices__h4">Цена</h4>
+                <p class="prices__p">1 000 ₽</p>
               </div>
               <div class="prices__time-order-item">
                 <div>
-                  <h4>Срок</h4>
+                  <h4 class="prices__h4">Срок</h4>
                   <p>30-120 мин</p>
                 </div>
                 <a class="prices__link" href="#">Заказать<span class="prices__arrow"></span></a>
@@ -356,33 +361,33 @@
             </div>
             <div class="prices__item swiper-slide">
               <div class="prices__title-item">
-                <h4>Ремонтные услуги</h4>
-                <p>Тестирование с выдачей технического заключения</p>
+                <h4 class="prices__h4">Ремонтные услуги</h4>
+                <p class="prices__p">Тестирование с выдачей технического заключения</p>
               </div>
               <div class="prices__price-item">
-                <h4>Цена</h4>
-                <p>1 000 ₽</p>
+                <h4 class="prices__h4">Цена</h4>
+                <p class="prices__p">1 000 ₽</p>
               </div>
               <div class="prices__time-order-item">
                 <div>
-                  <h4>Срок</h4>
+                  <h4 class="prices__h4">Срок</h4>
                   <p>30-120 мин</p>
                 </div>
                 <a class="prices__link" href="#">Заказать<span class="prices__arrow"></span></a>
               </div>
             </div>
-            <div class="prices__item swiper-slide">
+            <div class="prices__item prices__item--last swiper-slide">
               <div class="prices__title-item">
-                <h4>Ремонтные услуги</h4>
-                <p>Замена программного обеспечения</p>
+                <h4 class="prices__h4">Ремонтные услуги</h4>
+                <p class="prices__p">Замена программного обеспечения</p>
               </div>
               <div class="prices__price-item">
-                <h4>Цена</h4>
-                <p>1 000 ₽</p>
+                <h4 class="prices__h4">Цена</h4>
+                <p class="prices__p">1 000 ₽</p>
               </div>
               <div class="prices__time-order-item">
                 <div>
-                  <h4>Срок</h4>
+                  <h4 class="prices__h4">Срок</h4>
                   <p>30-120 мин</p>
                 </div>
                 <a class="prices__link" href="#">Заказать<span class="prices__arrow"></span></a>
@@ -398,9 +403,9 @@
         </div>
       </section>
       <footer class="footer page-container">
-        <p>© 2019 CPS<br>Разработано командой Apesong </p>
-        <p>Политика конфиденциальности</p>
-        <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+        <p class="footer__p footer__p--1">© 2019 CPS<br>Разработано командой Apesong </p>
+        <p class="footer__p footer__p--2">Политика конфиденциальности</p>
+        <p class="footer__p footer__p--3">Информация, размещенная на данной странице, не является публичной офертой</p>
       </footer>
     </main>
   </div>
