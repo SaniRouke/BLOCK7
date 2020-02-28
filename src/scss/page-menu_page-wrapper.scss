@@ -3,6 +3,7 @@
   @media (min-width: 1120px) {
     display: flex;
     flex-direction: column;
+    width: 300px;
     // min-height: 100%;
     box-sizing: border-box;
     border-right: $section-border;
@@ -23,5 +24,19 @@
     @media (min-width: 1120px) {
       display: flex;
     }
+  }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+
+  &--hidden {
+    opacity: .05;
+  }
+
+  @media (min-width: 1120px) {
+    flex-direction: row;
   }
 }

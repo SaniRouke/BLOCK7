@@ -17,18 +17,3 @@
     padding-left: 16px;
   }
 }
-
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  transition: .2s;
-
-  &--hidden {
-    opacity: .05;
-  }
-
-  @media (min-width: 1120px) {
-    flex-direction: row;
-  }
-}
-

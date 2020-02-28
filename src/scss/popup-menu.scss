@@ -52,10 +52,6 @@
     }
   }
 
-  &__btn-circle:not(:first-of-type) {
-    margin-left: 16px;
-  }
-
   &__nav {
     display: flex;
     flex-direction: column;

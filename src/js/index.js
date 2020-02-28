@@ -91,30 +91,32 @@ let buttonsShowMore = {
   'devises__expand-btn': 'devises__item',
 }
 
-function hideSlides(button, itemClass) {
+function showSlides(button, itemClass) {
   let items = document.querySelectorAll(`.${itemClass}`);
-  let btn = document.querySelector(`.${button}`)
+  let btn = document.querySelector(`.${button}`);
+  let btnClassName = btn.className;
   return function () {
+    console.log(btn.className)
     for (let i = 0; i < items.length; i++) {
-      items[i].classList.toggle(`${itemClass}--visible`);
+      items[i].classList.toggle(`${itemClass}--visible--block`);
 
     }
     if (btn.innerHTML === 'Скрыть') {
       btn.innerHTML = 'Показать все';
-      btn.style.backgroundImage = 'url(img/expand-down.svg)'
+      btn.classList.remove(`${btnClassName}--opened`);
     } else {
       btn.innerHTML = 'Скрыть';
-      btn.style.backgroundImage = 'url(img/expand-up.svg)'
+      btn.classList.add(`${btnClassName}--opened`);
     }
   }
 }
-let addShowMoreEvents = function (sliders) {
+let addShowSlidesEvents = function (sliders) {
   for (let i in sliders) {
     let btn = document.querySelector(`.${i}`);
-    btn.addEventListener('click', hideSlides(i, sliders[i]));
+    btn.addEventListener('click', showSlides(i, sliders[i]));
   }
 }
-addShowMoreEvents(buttonsShowMore);
+addShowSlidesEvents(buttonsShowMore);
 // {
 //   let swiperContentNav,
 //     swiperBrandList,

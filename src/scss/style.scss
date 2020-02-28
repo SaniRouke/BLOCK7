@@ -13,15 +13,15 @@ $red: 2px solid red;
 @import 'page-containers.scss';
 @import 'btn-circle.scss';
 @import 'content-title.scss';
+@import 'header.scss';
+@import 'nav-menu.scss';
 // @import 'mySlider.scss';
 // popups
 @import 'popup-menu.scss';
 @import 'popup-feedback.scss';
 @import 'popup-call.scss';
-// // page-menu
-@import 'header.scss';
-@import 'nav-menu.scss';
-@import 'page-menu.scss';
+// direction wrapper
+@import 'page-menu_page-wrapper.scss';
 // Page description
 @import 'page-description.scss';
 // Brands
@@ -60,6 +60,7 @@ button,
 button:focus {
   outline-width: 0;
 }
+
 body {
   overflow-x: hidden;
   position: relative;
