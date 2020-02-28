@@ -27,40 +27,58 @@ let popups = {
   'call': 'popup-call',
   'popup-call__cancel': 'popup-call',
 };
+let isOpen = false;
 
 let showPopup = function (popup) {
   let pageWrapper = document.querySelector('.page-wrapper');
   let popupNode = document.querySelector(`.${popup}`);
 
-  let classToggle = function () {
+  let doVisible = function () {
+    if (isOpen) {
+      closeAllPopups();
+    }
+    isOpen = true;
     pageWrapper.classList.add('page-wrapper--hidden');
 
-    popupNode.classList.toggle(`${popup}--visible`);
+    popupNode.classList.add(`${popup}--visible`);
+    console.log(popupNode.classList)
     document.addEventListener('keydown', function (evt) {
       if (evt.keyCode === 27) {
-        classToggle();
-        showPage();
+        doVisible();
+        showPage(popup);
       }
     });
   };
 
-  return classToggle;
+  return doVisible;
+}
+let closeAllPopups = function () {
+  let popupMenu = document.querySelector('.popup-menu');
+  let popupFeedback = document.querySelector('.popup-feedback');
+  let popupCall = document.querySelector('.popup-call');
+  popupMenu.classList.remove('popup-menu--visible');
+  popupFeedback.classList.remove('popup-feedback--visible');
+  popupCall.classList.remove('popup-call--visible');
+  isOpen = false;
 }
 let showPage = function () {
   let pageWrapper = document.querySelector('.page-wrapper');
-  pageWrapper.classList.remove('page-wrapper--hidden');
+  return () => {
+    pageWrapper.classList.remove('page-wrapper--hidden');
+    closeAllPopups();
+  }
 }
 
 let addPopupEvents = function (obj) {
   for (let i in obj) {
     let btns = document.querySelectorAll(`.${i}`);
-    for (let k = 0; k < btns.length; k++) {
-      btns[k].addEventListener('click', showPopup(obj[i]));
-      // if
-    }
     if (i.indexOf('cancel') != -1) {
       let cancel = document.querySelector(`.${i}`)
-      cancel.addEventListener('click', showPage);
+      cancel.addEventListener('click', showPage());
+    } else {
+      for (let k = 0; k < btns.length; k++) {
+        btns[k].addEventListener('click', showPopup(obj[i]));
+      }
     }
   }
 }

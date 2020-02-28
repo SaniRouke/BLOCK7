@@ -13,8 +13,6 @@ $red: 2px solid red;
 @import 'page-containers.scss';
 @import 'btn-circle.scss';
 @import 'content-title.scss';
-@import 'header.scss';
-@import 'nav-menu.scss';
 // @import 'mySlider.scss';
 // popups
 @import 'popup-menu.scss';
@@ -22,6 +20,9 @@ $red: 2px solid red;
 @import 'popup-call.scss';
 // direction wrapper
 @import 'page-menu_page-wrapper.scss';
+// page-menu
+@import 'header.scss';
+@import 'nav-menu.scss';
 // Page description
 @import 'page-description.scss';
 // Brands
@@ -39,11 +40,13 @@ $red: 2px solid red;
   src: url(../fonts/TTLakes-Regular.woff);
   font-weight: normal;
 }
+
 @font-face {
   font-family: TTLakes;
   src: url(../fonts/TTLakes-Medium.woff);
   font-weight: 500;
 }
+
 @font-face {
   font-family: TTLakes;
   src: url(../fonts/TTLakes-Bold.woff);
@@ -54,6 +57,7 @@ $red: 2px solid red;
 html {
   overflow-x: hidden;
 }
+
 a,
 a:focus,
 button,
@@ -74,4 +78,3 @@ body {
   background: $main-background;
   position: relative;
 }
-

@@ -29,27 +29,27 @@
 
   &__header {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
 
     height: 88px;
     background: #FFF;
     box-sizing: border-box;
+  }
 
-    &__logo {
-      margin-left: 16px;
-      transition: .2s;
+  &__logo {
+    margin-left: 16px;
+    transition: .2s;
 
-      &:hover,
-      &:focus {
-        opacity: .8;
-        transform: scale(1.05);
-      }
+    &:hover,
+    &:focus {
+      opacity: .8;
+      transform: scale(1.05);
     }
+  }
 
-    &__block-grow {
-      flex-grow: 1;
-    }
+  &__block-grow {
+    flex-grow: 1;
   }
 
   &__nav {
@@ -60,8 +60,13 @@
     flex-grow: 1;
     box-sizing: border-box;
 
-    &__contacts {
-      padding: 0 24px;
-    }
+  }
+
+  &__contacts {
+    padding: 0 24px;
+  }
+
+  &__btn-circle {
+    margin-right: 16px;
   }
 }
